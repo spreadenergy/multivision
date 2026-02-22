@@ -1,42 +1,19 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-const latestEpisodes = [
-    {
-        showTitle: "Opinion Junkyard",
-        episodeTitle: "Is Cancel Culture Actually Dead?",
-        coverImage: "/shows/opinion-junkyard.jpg",
-    },
-    {
-        showTitle: "100 Ways",
-        episodeTitle: "100 Ways to Build Wealth in Your 20s",
-        coverImage: "/shows/100-ways.jpg",
-    },
-    {
-        showTitle: "HyphyTown",
-        episodeTitle: "The Bay Area Sound: Past, Present, Future",
-        coverImage: "/shows/hyphytown.jpg",
-    },
-    {
-        showTitle: "Reprograma Tu Mente",
-        episodeTitle: "Cómo Superar el Miedo al Fracaso",
-        coverImage: "/shows/reprograma-tu-mente.jpg",
-    },
-    {
-        showTitle: "Drop That!",
-        episodeTitle: "Top 10 Underground Tracks This Month",
-        coverImage: "/shows/drop-that.jpg",
-    },
-    {
-        showTitle: "Good Looking English",
-        episodeTitle: "Slang You Need to Know in 2026",
-        coverImage: "/shows/good-looking-english.jpg",
-    },
-];
+import { shows } from "@/data/shows";
+
+const latestEpisodes = shows.slice(0, 6).map(show => ({
+    showTitle: show.title,
+    episodeTitle: "Latest Episode", // Placeholder title for now
+    coverImage: show.coverImage,
+    slug: show.slug,
+}));
 
 export default function LatestEpisodes() {
     return (
@@ -58,9 +35,15 @@ export default function LatestEpisodes() {
                             transition={{ delay: i * 0.1 }}
                         >
                             <div className="relative h-44 bg-brand-muted overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-br from-brand-coral/20 via-brand-green/20 to-brand-cyan/20" />
+                                <Image
+                                    src={episode.coverImage}
+                                    alt={episode.showTitle}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-brand-black/40 group-hover:bg-brand-black/20 transition-colors" />
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-12 h-12 rounded-full bg-brand-coral/20 flex items-center justify-center group-hover:bg-brand-coral/40 transition-colors">
+                                    <div className="w-12 h-12 rounded-full bg-brand-coral/80 flex items-center justify-center group-hover:bg-brand-coral transition-colors">
                                         <svg className="w-5 h-5 text-brand-text ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M8 5v14l11-7z" />
                                         </svg>

@@ -5,23 +5,13 @@ import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-const originals = [
-    {
-        title: "Opinion Junkyard",
-        description: "Where hot takes go to live forever. Our flagship debate format.",
-        badge: "ORIGINAL",
-    },
-    {
-        title: "100 Ways",
-        description: "One hundred approaches to life's biggest challenges. An IP built to scale.",
-        badge: "ORIGINAL",
-    },
-    {
-        title: "HyphyTown",
-        description: "Bay Area culture, music, and lifestyle — the definitive voice of a movement.",
-        badge: "ORIGINAL",
-    },
-];
+import { shows } from "@/data/shows";
+
+const originals = shows.slice(0, 3).map(show => ({
+    title: show.title,
+    description: show.tagline,
+    badge: "ORIGINAL",
+}));
 
 export default function Originals() {
     return (

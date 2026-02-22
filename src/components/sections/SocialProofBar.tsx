@@ -12,9 +12,9 @@ const platforms = [
 ];
 
 const stats = [
-    { value: "6+", label: "Active Shows" },
+    { value: "13", label: "Active Shows" },
     { value: "Multi", label: "Platform Distribution" },
-    { value: "5+", label: "Content Genres" },
+    { value: "9+", label: "Content Genres" },
 ];
 
 export default function SocialProofBar() {
