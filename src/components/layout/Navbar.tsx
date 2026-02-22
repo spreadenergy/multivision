@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 
 const navLinks = [
@@ -26,36 +28,16 @@ export default function Navbar() {
         <>
             <nav
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                        ? "bg-brand-black/90 backdrop-blur-xl border-b border-brand-border shadow-lg"
-                        : "bg-transparent"
+                    ? "bg-brand-black/90 backdrop-blur-xl border-b border-brand-border shadow-lg"
+                    : "bg-transparent"
                     }`}
             >
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
-                    {/* Logo */}
-                    <a href="/" className="flex items-center gap-3 group">
-                        <div className="relative w-10 h-10">
-                            <svg viewBox="0 0 100 100" className="w-full h-full">
-                                <path
-                                    d="M15 80 L15 35 Q15 20 30 20 L30 20 Q40 20 40 35 L40 55 L50 35 L60 55 L60 35 Q60 20 70 20 L70 20 Q85 20 85 35 L85 80"
-                                    fill="none"
-                                    stroke="url(#logoGradient)"
-                                    strokeWidth="10"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                                <defs>
-                                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stopColor="#E8435A" />
-                                        <stop offset="50%" stopColor="#7DC83E" />
-                                        <stop offset="100%" stopColor="#4CC9E0" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
+                    <Link href="/" className="flex items-center gap-3 group">
+                        <div className="relative w-32 h-10 sm:w-40 sm:h-12 overflow-hidden rounded">
+                            <Image src="/logo-full.jpg" alt="Multivision Logo" fill className="object-contain" priority />
                         </div>
-                        <span className="font-heading text-xl font-bold tracking-wide hidden sm:inline-block">
-                            MULTIVISION
-                        </span>
-                    </a>
+                    </Link>
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-8">

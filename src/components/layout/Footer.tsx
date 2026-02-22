@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const footerLinks = {
     Shows: [
@@ -67,24 +69,8 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="lg:col-span-1">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-8 h-8">
-                                <svg viewBox="0 0 100 100" className="w-full h-full">
-                                    <path
-                                        d="M15 80 L15 35 Q15 20 30 20 L30 20 Q40 20 40 35 L40 55 L50 35 L60 55 L60 35 Q60 20 70 20 L70 20 Q85 20 85 35 L85 80"
-                                        fill="none"
-                                        stroke="url(#footerGrad)"
-                                        strokeWidth="10"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                    <defs>
-                                        <linearGradient id="footerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="0%" stopColor="#E8435A" />
-                                            <stop offset="50%" stopColor="#7DC83E" />
-                                            <stop offset="100%" stopColor="#4CC9E0" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
+                            <div className="w-16 h-6 overflow-hidden rounded relative">
+                                <Image src="/logo-full.jpg" alt="Multivision Logo" fill className="object-contain" />
                             </div>
                             <span className="font-heading text-lg font-bold tracking-wide">
                                 MULTIVISION
@@ -96,14 +82,14 @@ export default function Footer() {
                         {/* Socials */}
                         <div className="mt-6 flex gap-4">
                             {socialLinks.map((social) => (
-                                <a
+                                <Link
                                     key={social.label}
                                     href={social.href}
                                     aria-label={social.label}
                                     className="text-brand-text-secondary hover:text-brand-text transition-colors duration-200"
                                 >
                                     {social.icon}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -117,12 +103,12 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 {links.map((link) => (
                                     <li key={link.label}>
-                                        <a
+                                        <Link
                                             href={link.href}
                                             className="text-sm text-brand-text-secondary hover:text-brand-coral transition-colors duration-200"
                                         >
                                             {link.label}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

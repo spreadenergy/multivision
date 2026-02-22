@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 export default function Hero() {
@@ -22,31 +23,12 @@ export default function Hero() {
             <div className="relative z-10 text-center max-w-4xl mx-auto">
                 {/* Animated Logo Mark */}
                 <motion.div
-                    className="mx-auto mb-8 w-24 h-24 md:w-32 md:h-32"
+                    className="mx-auto mb-8 w-48 h-24 md:w-64 md:h-32 relative"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                        <motion.path
-                            d="M15 80 L15 35 Q15 20 30 20 L30 20 Q40 20 40 35 L40 55 L50 35 L60 55 L60 35 Q60 20 70 20 L70 20 Q85 20 85 35 L85 80"
-                            fill="none"
-                            stroke="url(#heroGradient)"
-                            strokeWidth="8"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            initial={{ pathLength: 0 }}
-                            animate={{ pathLength: 1 }}
-                            transition={{ duration: 2, ease: "easeInOut" }}
-                        />
-                        <defs>
-                            <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stopColor="#E8435A" />
-                                <stop offset="50%" stopColor="#7DC83E" />
-                                <stop offset="100%" stopColor="#4CC9E0" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <Image src="/logo-full.jpg" alt="Multivision Logo" fill className="object-contain rounded-lg" priority />
                 </motion.div>
 
                 {/* Headline */}
