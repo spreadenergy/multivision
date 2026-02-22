@@ -1,10 +1,17 @@
+export interface Host {
+    name: string;
+    role: string;
+    bio: string;
+    image: string;
+}
+
 export interface Show {
     slug: string;
     title: string;
     tagline: string;
-    category: "culture" | "comedy" | "education" | "lifestyle" | "spanish";
+    category: "culture" | "comedy" | "education" | "lifestyle" | "spanish" | "intellectual" | "marketing" | "spirituality" | "art";
     coverImage: string;
-    hosts: string[];
+    hosts: Host[];
     platforms: {
         spotify?: string;
         apple?: string;
@@ -17,107 +24,258 @@ export interface Show {
 
 export const shows: Show[] = [
     {
-        slug: "opinion-junkyard",
-        title: "Opinion Junkyard",
-        tagline: "Where hot takes go to live forever.",
-        category: "culture",
-        coverImage: "/shows/opinion-junkyard.svg",
-        hosts: ["TBD"],
-        platforms: {
-            spotify: "#",
-            apple: "#",
-            youtube: "#",
-        },
+        slug: "wet-paint",
+        title: "Wet Paint",
+        tagline: "Art, vulnerability, and creative reinvention.",
+        category: "art",
+        coverImage: "/shows/wet-paint.png",
+        hosts: [
+            {
+                name: "Maria Williams",
+                role: "Host",
+                bio: "Maria Williams (Art by Maudie) explores the emotional and spiritual layers behind artistic creation.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
         featured: true,
         status: "active",
-        description:
-            "A raw, unfiltered space where opinions aren't just shared — they're debated, dissected, and left out in the open. No topic is off limits. No take is too hot. This is where culture, politics, and everyday life collide.",
+        description: "A raw, expressive podcast exploring the emotional and spiritual layers behind artistic creation. Conversations about doubt, discipline, identity shifts, and becoming through art."
+    },
+    {
+        slug: "higher-signals",
+        title: "Higher Signals",
+        tagline: "Spiritual insight and angelic guidance.",
+        category: "spirituality",
+        coverImage: "/shows/higher-signals.png",
+        hosts: [
+            {
+                name: "Eve Solara",
+                role: "Host",
+                bio: "Eve Solara provides reflective spiritual insight centered on divine messages and higher consciousness.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "A reflective spiritual podcast centered on divine messages, intuitive downloads, symbolism, and higher consciousness awareness."
+    },
+    {
+        slug: "opinion-junkyard",
+        title: "Opinion Junkyard",
+        tagline: "Cultural commentary and unfiltered debate.",
+        category: "culture",
+        coverImage: "/shows/opinion-junkyard.png",
+        hosts: [
+            {
+                name: "Various Hosts",
+                role: "Hosts",
+                bio: "A dynamic rotation of voices bringing sharp, opinion-driven discussions on culture and politics.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "Sharp, opinion-driven discussions on culture, politics, relationships, and current events with bold personality and no polish."
     },
     {
         slug: "100-ways",
         title: "100 Ways",
-        tagline: "One hundred paths. Infinite possibilities.",
+        tagline: "Creative problem solving and multiplicity thinking.",
         category: "lifestyle",
-        coverImage: "/shows/100-ways.svg",
-        hosts: ["TBD"],
-        platforms: {
-            spotify: "#",
-            apple: "#",
-            youtube: "#",
-        },
+        coverImage: "/shows/100-ways.png",
+        hosts: [
+            {
+                name: "Dio Palencia",
+                role: "Co-Host",
+                bio: "Dio Palencia explores multiplicity thinking and creative problem-solving.",
+                image: "/hosts/placeholder.webp"
+            },
+            {
+                name: "Yaneva Mercado",
+                role: "Co-Host",
+                bio: "Yaneva Mercado brings insights into approaching life's challenges from 100 different angles.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
         featured: true,
         status: "active",
-        description:
-            "Exploring 100 different ways to approach life's biggest challenges — from building wealth to finding purpose. Each episode tackles a new angle with actionable insights and real stories.",
+        description: "Each episode explores 100 ways to approach a single theme, reinforcing the idea that there is never just one way."
     },
     {
-        slug: "hyphytown",
-        title: "HyphyTown",
-        tagline: "Bay Area energy. Global reach.",
-        category: "culture",
-        coverImage: "/shows/hyphytown.svg",
-        hosts: ["TBD"],
-        platforms: {
-            spotify: "#",
-            apple: "#",
-            youtube: "#",
-        },
+        slug: "la-consulta",
+        title: "La Consulta",
+        tagline: "Personal growth and real-life dilemmas.",
+        category: "spanish",
+        coverImage: "/shows/la-consulta.png",
+        hosts: [
+            {
+                name: "Carla Marco",
+                role: "Host",
+                bio: "Carla Marco offers thoughtful conversations about relationships and identity in this Spanish-language advice podcast.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
         featured: true,
         status: "active",
-        description:
-            "Straight from the Bay Area, HyphyTown brings the energy, the culture, and the conversations that define a generation. Music, lifestyle, and the stories behind the movement.",
+        description: "A Spanish-language advice and reflection podcast where listeners’ questions become thoughtful conversations about relationships, identity, and life decisions."
     },
     {
         slug: "reprograma-tu-mente",
         title: "Reprograma Tu Mente",
-        tagline: "Transforma tu pensamiento. Transforma tu vida.",
+        tagline: "Neuroprogramming and mental transformation.",
         category: "spanish",
-        coverImage: "/shows/reprograma-tu-mente.svg",
-        hosts: ["TBD"],
-        platforms: {
-            spotify: "#",
-            apple: "#",
-            youtube: "#",
-        },
+        coverImage: "/shows/reprograma-tu-mente.png",
+        hosts: [
+            {
+                name: "Dr. Alfredo Arias",
+                role: "Host",
+                bio: "Dr. Alfredo Arias focuses on subconscious reconditioning and radical self-training through applied psychology.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
         featured: true,
         status: "active",
-        description:
-            "Un podcast en español dedicado al crecimiento personal y la mentalidad ganadora. Cada episodio ofrece herramientas prácticas para reprogramar tu mente y alcanzar tu máximo potencial.",
+        description: "A Spanish-language show focused on subconscious reconditioning, male development, and radical self-training through applied psychology."
     },
     {
-        slug: "drop-that",
-        title: "Drop That!",
-        tagline: "Drop the beat. Drop the knowledge.",
-        category: "comedy",
-        coverImage: "/shows/drop-that.svg",
-        hosts: ["TBD"],
-        platforms: {
-            spotify: "#",
-            apple: "#",
-            youtube: "#",
-        },
+        slug: "spread-uno",
+        title: "SPREAD Uno Podcast",
+        tagline: "Modern marketing and branding in Spanish.",
+        category: "marketing",
+        coverImage: "/shows/spread-uno.png",
+        hosts: [
+            {
+                name: "Ghansery Tovar",
+                role: "Host",
+                bio: "Ghansery Tovar provides insights into brand building and creative strategy across Latin American markets.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
         featured: true,
         status: "active",
-        description:
-            "Where music meets conversation. Drop That! brings together artists, creators, and culture-makers to break down what's hot, what's next, and what needs to be said.",
+        description: "Insights into brand building, influence systems, and creative strategy across Latin American markets."
+    },
+    {
+        slug: "reminding-yourself",
+        title: "Reminding Yourself",
+        tagline: "Men’s mental resilience and rebuilding.",
+        category: "lifestyle",
+        coverImage: "/shows/reminding-yourself.png",
+        hosts: [
+            {
+                name: "Keu Reyes",
+                role: "Host",
+                bio: "Keu Reyes reflects on discipline, fatherhood, emotional recalibration, and personal reconstruction.",
+                image: "/hosts/keu-reyes.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "Reflections on discipline, fatherhood, emotional recalibration, burnout recovery, and personal reconstruction."
+    },
+    {
+        slug: "seduccion-estrategica",
+        title: "Seducción Estratégica",
+        tagline: "Spanish-language seduction systems.",
+        category: "spanish",
+        coverImage: "/shows/seduccion-estrategica.png",
+        hosts: [
+            {
+                name: "Keu Reyes",
+                role: "Host",
+                bio: "Keu Reyes dives into human mating strategy, emotional intelligence, and applied psychological influence.",
+                image: "/hosts/keu-reyes.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "A deeper dive into human mating strategy, emotional intelligence, and applied psychological influence."
     },
     {
         slug: "good-looking-english",
-        title: "Good Looking English",
-        tagline: "Learn English the way it's actually spoken.",
-        category: "education",
-        coverImage: "/shows/good-looking-english.svg",
-        hosts: ["TBD"],
-        platforms: {
-            spotify: "#",
-            apple: "#",
-            youtube: "#",
-        },
+        title: "Good-Looking English",
+        tagline: "Cultural commentary with sharp humor.",
+        category: "comedy",
+        coverImage: "/shows/good-looking-english.png",
+        hosts: [
+            {
+                name: "TBD",
+                role: "Host",
+                bio: "Driven by conservative takes, cultural observations, and comedic insight.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
         featured: true,
         status: "active",
-        description:
-            "Forget textbooks. Good Looking English teaches real-world English through culture, slang, and everyday conversation. Designed for non-native speakers who want to sound natural.",
+        description: "An ironic title for a show driven by conservative takes, cultural observations, and comedic insight."
     },
+    {
+        slug: "hyphytown",
+        title: "HyphyTown",
+        tagline: "Energy, music, Bay Area culture.",
+        category: "culture",
+        coverImage: "/shows/hyphytown.png",
+        hosts: [
+            {
+                name: "Demarco Allen",
+                role: "Host",
+                bio: "Demarco Allen brings high-energy cultural conversations centered around Bay Area movement and sound.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "A high-energy cultural show centered around movement, sound, and creative expression."
+    },
+    {
+        slug: "artistic-warfare",
+        title: "The Keu Reyes Project / Artistic Warfare",
+        tagline: "Systems, influence, philosophy, and power.",
+        category: "intellectual",
+        coverImage: "/shows/artistic-warfare.jpg",
+        hosts: [
+            {
+                name: "Keu Reyes",
+                role: "Host",
+                bio: "Keu Reyes explores psychological systems, governance theory, and human evolution concepts.",
+                image: "/hosts/keu-reyes.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "A flagship intellectual property platform that explores psychological systems, governance theory, and human evolution concepts."
+    },
+    {
+        slug: "seductioned",
+        title: "SeductionEd",
+        tagline: "Education in attraction dynamics.",
+        category: "education",
+        coverImage: "/shows/seductioned.png",
+        hosts: [
+            {
+                name: "Keu Reyes",
+                role: "Host",
+                bio: "Keu Reyes teaches the mechanics of attraction, signaling, and human behavioral economics.",
+                image: "/hosts/keu-reyes.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "Structured episodes teaching the mechanics of attraction, signaling, and human behavioral economics."
+    }
 ];
 
 export function getShowBySlug(slug: string): Show | undefined {

@@ -58,13 +58,33 @@ export default function ShowPageClient({ show, relatedShows }: ShowPageClientPro
                             </p>
 
                             {/* Hosts */}
-                            <div className="mt-6">
-                                <span className="text-xs text-brand-text-secondary uppercase tracking-wider">
-                                    Hosted by
-                                </span>
-                                <p className="mt-1 font-heading font-semibold">
-                                    {show.hosts.join(", ")}
-                                </p>
+                            <div className="mt-8">
+                                <h3 className="text-sm font-bold uppercase tracking-widest text-brand-text-secondary mb-6">
+                                    Meet the {show.hosts.length > 1 ? "Hosts" : "Host"}
+                                </h3>
+                                <div className="flex flex-col gap-8">
+                                    {show.hosts.map((host, index) => (
+                                        <div key={index} className="flex items-start gap-5">
+                                            <div className="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 border border-brand-border shadow-sm">
+                                                <Image
+                                                    src={host.image}
+                                                    alt={host.name}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                            <div>
+                                                <h4 className="font-heading font-bold text-xl">{host.name}</h4>
+                                                <p className="text-xs text-brand-coral font-bold uppercase tracking-wider mb-2">
+                                                    {host.role}
+                                                </p>
+                                                <p className="text-sm text-brand-text-secondary leading-relaxed max-w-md">
+                                                    {host.bio}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
 
                             {/* Platform Links */}

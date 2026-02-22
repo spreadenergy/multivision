@@ -18,6 +18,10 @@ const categoryColors: Record<string, string> = {
     education: "bg-brand-cyan/20 text-brand-cyan",
     lifestyle: "bg-brand-coral/20 text-brand-coral",
     spanish: "bg-brand-green/20 text-brand-green",
+    intellectual: "bg-brand-cyan/20 text-brand-cyan",
+    marketing: "bg-brand-green/20 text-brand-green",
+    spirituality: "bg-brand-coral/20 text-brand-coral",
+    art: "bg-brand-cyan/20 text-brand-cyan",
 };
 
 export default function ShowCard({
