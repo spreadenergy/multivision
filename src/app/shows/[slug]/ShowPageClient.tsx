@@ -44,9 +44,16 @@ export default function ShowPageClient({ show, relatedShows }: ShowPageClientPro
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2, duration: 0.6 }}
                         >
-                            <span className="inline-block rounded-full bg-brand-coral/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-coral mb-4">
-                                {show.category}
-                            </span>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                <span className="inline-block rounded-full bg-brand-coral/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-coral">
+                                    {show.category}
+                                </span>
+                                {show.tags?.map((tag) => (
+                                    <span key={tag} className="inline-block rounded-full bg-brand-muted/30 border border-brand-border/40 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-text-secondary pr-4">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
                             <h1 className="font-heading text-4xl font-bold md:text-5xl lg:text-6xl">
                                 {show.title}
                             </h1>
@@ -142,6 +149,7 @@ export default function ShowPageClient({ show, relatedShows }: ShowPageClientPro
                                 tagline={s.tagline}
                                 category={s.category}
                                 coverImage={s.coverImage}
+                                tags={s.tags}
                             />
                         ))}
                     </div>

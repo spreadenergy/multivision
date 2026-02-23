@@ -23,6 +23,7 @@ export default function ShowsPage() {
                             tagline={show.tagline}
                             category={show.category}
                             coverImage={show.coverImage}
+                            tags={show.tags}
                         />
                     ))}
                 </div>

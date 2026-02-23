@@ -10,6 +10,7 @@ interface ShowCardProps {
     tagline: string;
     category: string;
     coverImage: string;
+    tags?: string[];
 }
 
 const categoryColors: Record<string, string> = {
@@ -22,6 +23,7 @@ const categoryColors: Record<string, string> = {
     marketing: "bg-brand-green/20 text-brand-green",
     spirituality: "bg-brand-coral/20 text-brand-coral",
     art: "bg-brand-cyan/20 text-brand-cyan",
+    fashion: "bg-brand-coral/20 text-brand-coral",
 };
 
 export default function ShowCard({
@@ -30,6 +32,7 @@ export default function ShowCard({
     tagline,
     category,
     coverImage,
+    tags,
 }: ShowCardProps) {
     return (
         <motion.a
@@ -52,12 +55,22 @@ export default function ShowCard({
 
             {/* Content */}
             <div className="p-5">
-                <span
-                    className={`inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider ${categoryColors[category] || "bg-brand-muted text-brand-text-secondary"
-                        }`}
-                >
-                    {category}
-                </span>
+                <div className="flex flex-wrap gap-2 mb-3">
+                    <span
+                        className={`inline-block rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider ${categoryColors[category] || "bg-brand-muted text-brand-text-secondary"
+                            }`}
+                    >
+                        {category}
+                    </span>
+                    {tags?.map((tag) => (
+                        <span
+                            key={tag}
+                            className="inline-block rounded-full border border-brand-border/40 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-text-secondary bg-brand-surface/50"
+                        >
+                            {tag}
+                        </span>
+                    ))}
+                </div>
                 <h3 className="mt-3 font-heading text-xl font-bold leading-tight">
                     {title}
                 </h3>

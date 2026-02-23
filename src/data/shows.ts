@@ -9,7 +9,8 @@ export interface Show {
     slug: string;
     title: string;
     tagline: string;
-    category: "culture" | "comedy" | "education" | "lifestyle" | "spanish" | "intellectual" | "marketing" | "spirituality" | "art";
+    category: "culture" | "comedy" | "education" | "lifestyle" | "spanish" | "intellectual" | "marketing" | "spirituality" | "art" | "fashion";
+    tags?: string[];
     coverImage: string;
     hosts: Host[];
     platforms: {
@@ -53,7 +54,7 @@ export const shows: Show[] = [
                 name: "Keu Reyes",
                 role: "Host",
                 bio: "Keu Reyes explores systems, influence, and philosophy with a sharp, cultural lens.",
-                image: "/hosts/keu-reyes.webp"
+                image: "/hosts/keu-reyes.png"
             },
             {
                 name: "Rick Najera",
@@ -119,16 +120,16 @@ export const shows: Show[] = [
         coverImage: "/shows/100-ways.png",
         hosts: [
             {
-                name: "Dio Palencia",
-                role: "Co-Host",
-                bio: "Dio Palencia explores multiplicity thinking and creative problem-solving.",
-                image: "/hosts/placeholder.webp"
-            },
-            {
                 name: "Yaneva Mercado",
                 role: "Co-Host",
                 bio: "Yaneva Mercado brings insights into approaching life's challenges from 100 different angles.",
                 image: "/hosts/yaneva-mercado.png"
+            },
+            {
+                name: "Dionisio Palencia",
+                role: "Co-Host",
+                bio: "Dionisio Palencia explores multiplicity thinking and creative problem-solving.",
+                image: "/hosts/dionisio-palencia.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -141,6 +142,7 @@ export const shows: Show[] = [
         title: "La Consulta",
         tagline: "Personal growth and real-life dilemmas.",
         category: "spanish",
+        tags: ["Lifestyle", "Relationships"],
         coverImage: "/shows/la-consulta.png",
         hosts: [
             {
@@ -160,6 +162,7 @@ export const shows: Show[] = [
         title: "Reprograma Tu Mente",
         tagline: "Neuroprogramming and mental transformation.",
         category: "spanish",
+        tags: ["Psychology", "Self-Improvement"],
         coverImage: "/shows/reprograma-tu-mente.png",
         hosts: [
             {
@@ -167,6 +170,12 @@ export const shows: Show[] = [
                 role: "Host",
                 bio: "Dr. Alfredo Arias focuses on subconscious reconditioning and radical self-training through applied psychology.",
                 image: "/hosts/alfredo-arias.png"
+            },
+            {
+                name: "Dionisio Palencia",
+                role: "Host",
+                bio: "Dionisio Palencia co-hosts this deep dive into mental transformation and applied psychology.",
+                image: "/hosts/dionisio-palencia.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -179,6 +188,7 @@ export const shows: Show[] = [
         title: "SPREAD Uno Podcast",
         tagline: "Modern marketing and branding in Spanish.",
         category: "marketing",
+        tags: ["Spanish", "Branding"],
         coverImage: "/shows/spread-uno.png",
         hosts: [
             {
@@ -204,7 +214,7 @@ export const shows: Show[] = [
                 name: "Keu Reyes",
                 role: "Host",
                 bio: "Keu Reyes reflects on discipline, fatherhood, emotional recalibration, and personal reconstruction.",
-                image: "/hosts/keu-reyes.webp"
+                image: "/hosts/keu-reyes.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -217,13 +227,14 @@ export const shows: Show[] = [
         title: "Seducción Estratégica",
         tagline: "Spanish-language seduction systems.",
         category: "spanish",
+        tags: ["Dating", "Psychology"],
         coverImage: "/shows/seduccion-estrategica.png",
         hosts: [
             {
                 name: "Keu Reyes",
                 role: "Host",
                 bio: "Keu Reyes dives into human mating strategy, emotional intelligence, and applied psychological influence.",
-                image: "/hosts/keu-reyes.webp"
+                image: "/hosts/keu-reyes.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -255,7 +266,7 @@ export const shows: Show[] = [
         title: "HyphyTown",
         tagline: "Energy, music, Bay Area culture.",
         category: "culture",
-        coverImage: "/shows/hyphytown.jpg",
+        coverImage: "/shows/hyphytown.png",
         hosts: [
             {
                 name: "Demarco Allen",
@@ -280,7 +291,7 @@ export const shows: Show[] = [
                 name: "Keu Reyes",
                 role: "Host",
                 bio: "Keu Reyes explores psychological systems, governance theory, and human evolution concepts.",
-                image: "/hosts/keu-reyes.webp"
+                image: "/hosts/keu-reyes.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -299,13 +310,51 @@ export const shows: Show[] = [
                 name: "Keu Reyes",
                 role: "Host",
                 bio: "Keu Reyes teaches the mechanics of attraction, signaling, and human behavioral economics.",
-                image: "/hosts/keu-reyes.webp"
+                image: "/hosts/keu-reyes.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
         featured: true,
         status: "active",
         description: "Structured episodes teaching the mechanics of attraction, signaling, and human behavioral economics."
+    },
+    {
+        slug: "drop-that",
+        title: "Drop That",
+        tagline: "Streetwear, design, and culture.",
+        category: "fashion",
+        coverImage: "/shows/drop-that.png",
+        hosts: [
+            {
+                name: "TBD",
+                role: "Host",
+                bio: "Exploring the intersection of design, fashion, and cultural influence.",
+                image: "/hosts/placeholder.webp"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "A deep dive into streetwear culture, design philosophy, and the business of branding in the modern era."
+    },
+    {
+        slug: "propaganda-expert",
+        title: "Propaganda Expert",
+        tagline: "Mastering the art of influence.",
+        category: "intellectual",
+        coverImage: "/shows/propaganda-expert.jpg",
+        hosts: [
+            {
+                name: "Keu Reyes",
+                role: "Host",
+                bio: "Propaganda historian, expert on propaganda's methods & tactics. Experienced in the Art of Mass-Persuasion & Info Manipulation.",
+                image: "/hosts/keu-reyes.png"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "Exploring the mechanisms of mass persuasion, information manipulation, and the history of propaganda across civilizations."
     }
 ];
 

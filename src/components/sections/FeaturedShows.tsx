@@ -25,6 +25,7 @@ export default function FeaturedShows() {
                         tagline={show.tagline}
                         category={show.category}
                         coverImage={show.coverImage}
+                        tags={show.tags}
                     />
                 ))}
             </div>
