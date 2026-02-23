@@ -59,13 +59,13 @@ export const shows: Show[] = [
                 name: "Rick Najera",
                 role: "Host",
                 bio: "Award-winning writer, actor, and director Rick Najera brings his vast experience in comedy and storytelling.",
-                image: "/hosts/rick-najera.png"
+                image: "/hosts/rick-najera.jpg"
             },
             {
                 name: "Alfonso Amey",
                 role: "Animator",
                 bio: "Alfonso Amey provides the dynamic visual energy and animation that brings the show to life.",
-                image: "/hosts/alfonso-amey.png"
+                image: "/hosts/alfonso-amey.jpg"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
