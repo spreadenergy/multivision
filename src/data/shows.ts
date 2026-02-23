@@ -28,7 +28,7 @@ export const shows: Show[] = [
         title: "Wet Paint",
         tagline: "Art, vulnerability, and creative reinvention.",
         category: "art",
-        coverImage: "/shows/wet-paint.png",
+        coverImage: "/shows/wet-paint.jpg",
         hosts: [
             {
                 name: "Maria Williams",
@@ -78,7 +78,7 @@ export const shows: Show[] = [
         title: "Higher Signals",
         tagline: "Spiritual insight and angelic guidance.",
         category: "spirituality",
-        coverImage: "/shows/higher-signals.png",
+        coverImage: "/shows/higher-signals.jpg",
         hosts: [
             {
                 name: "Eve Solara",
@@ -97,7 +97,7 @@ export const shows: Show[] = [
         title: "Opinion Junkyard",
         tagline: "Cultural commentary and unfiltered debate.",
         category: "culture",
-        coverImage: "/shows/opinion-junkyard.png",
+        coverImage: "/shows/opinion-junkyard.jpg",
         hosts: [
             {
                 name: "Various Hosts",
