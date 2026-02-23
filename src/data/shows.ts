@@ -53,7 +53,7 @@ export const shows: Show[] = [
                 name: "Eve Solara",
                 role: "Host",
                 bio: "Eve Solara provides reflective spiritual insight centered on divine messages and higher consciousness.",
-                image: "/hosts/placeholder.webp"
+                image: "/hosts/eve-solara.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -116,7 +116,7 @@ export const shows: Show[] = [
                 name: "Carla Marco",
                 role: "Host",
                 bio: "Carla Marco offers thoughtful conversations about relationships and identity in this Spanish-language advice podcast.",
-                image: "/hosts/placeholder.webp"
+                image: "/hosts/carla-marco.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -154,7 +154,7 @@ export const shows: Show[] = [
                 name: "Ghansery Tovar",
                 role: "Host",
                 bio: "Ghansery Tovar provides insights into brand building and creative strategy across Latin American markets.",
-                image: "/hosts/placeholder.webp"
+                image: "/hosts/ghansery-tovar.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -224,13 +224,13 @@ export const shows: Show[] = [
         title: "HyphyTown",
         tagline: "Energy, music, Bay Area culture.",
         category: "culture",
-        coverImage: "/shows/hyphytown.png",
+        coverImage: "/shows/hyphytown.jpg",
         hosts: [
             {
                 name: "Demarco Allen",
                 role: "Host",
                 bio: "Demarco Allen brings high-energy cultural conversations centered around Bay Area movement and sound.",
-                image: "/hosts/placeholder.webp"
+                image: "/hosts/demarco-allen.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
