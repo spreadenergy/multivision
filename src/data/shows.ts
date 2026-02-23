@@ -34,7 +34,7 @@ export const shows: Show[] = [
                 name: "Maria Williams",
                 role: "Host",
                 bio: "Maria Williams (Art by Maudie) explores the emotional and spiritual layers behind artistic creation.",
-                image: "/hosts/placeholder.webp"
+                image: "/hosts/maria-williams.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -97,7 +97,7 @@ export const shows: Show[] = [
                 name: "Yaneva Mercado",
                 role: "Co-Host",
                 bio: "Yaneva Mercado brings insights into approaching life's challenges from 100 different angles.",
-                image: "/hosts/placeholder.webp"
+                image: "/hosts/yaneva-mercado.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
@@ -135,7 +135,7 @@ export const shows: Show[] = [
                 name: "Dr. Alfredo Arias",
                 role: "Host",
                 bio: "Dr. Alfredo Arias focuses on subconscious reconditioning and radical self-training through applied psychology.",
-                image: "/hosts/placeholder.webp"
+                image: "/hosts/alfredo-arias.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
