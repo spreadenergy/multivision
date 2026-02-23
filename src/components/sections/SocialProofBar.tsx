@@ -12,7 +12,7 @@ const platforms = [
 ];
 
 const stats = [
-    { value: "13", label: "Active Shows" },
+    { value: "14", label: "Active Shows" },
     { value: "Multi", label: "Platform Distribution" },
     { value: "9+", label: "Content Genres" },
 ];

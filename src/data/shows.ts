@@ -43,6 +43,37 @@ export const shows: Show[] = [
         description: "A raw, expressive podcast exploring the emotional and spiritual layers behind artistic creation. Conversations about doubt, discipline, identity shifts, and becoming through art."
     },
     {
+        slug: "caesar-chuy",
+        title: "Caesar & Chuy",
+        tagline: "Culture, comedy, and animated insights.",
+        category: "comedy",
+        coverImage: "/shows/caesar-chuy.png",
+        hosts: [
+            {
+                name: "Keu Reyes",
+                role: "Host",
+                bio: "Keu Reyes explores systems, influence, and philosophy with a sharp, cultural lens.",
+                image: "/hosts/keu-reyes.webp"
+            },
+            {
+                name: "Rick Najera",
+                role: "Host",
+                bio: "Award-winning writer, actor, and director Rick Najera brings his vast experience in comedy and storytelling.",
+                image: "/hosts/rick-najera.png"
+            },
+            {
+                name: "Alfonso Amey",
+                role: "Animator",
+                bio: "Alfonso Amey provides the dynamic visual energy and animation that brings the show to life.",
+                image: "/hosts/alfonso-amey.png"
+            }
+        ],
+        platforms: { spotify: "#", apple: "#", youtube: "#" },
+        featured: true,
+        status: "active",
+        description: "A unique blend of culture and comedy, featuring Keu Reyes and Rick Najera, with animation by Alfonso Amey."
+    },
+    {
         slug: "higher-signals",
         title: "Higher Signals",
         tagline: "Spiritual insight and angelic guidance.",
@@ -116,7 +147,7 @@ export const shows: Show[] = [
                 name: "Carla Marco",
                 role: "Host",
                 bio: "Carla Marco offers thoughtful conversations about relationships and identity in this Spanish-language advice podcast.",
-                image: "/hosts/carla-marco.png"
+                image: "/hosts/claudia-castro.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
