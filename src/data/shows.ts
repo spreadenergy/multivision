@@ -147,7 +147,7 @@ export const shows: Show[] = [
                 name: "Carla Marco",
                 role: "Host",
                 bio: "Carla Marco offers thoughtful conversations about relationships and identity in this Spanish-language advice podcast.",
-                image: "/hosts/claudia-castro.png"
+                image: "/hosts/carla-marco.png"
             }
         ],
         platforms: { spotify: "#", apple: "#", youtube: "#" },
