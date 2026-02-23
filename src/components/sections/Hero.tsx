@@ -36,7 +36,7 @@ export default function Hero() {
                     className="font-heading text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8, duration: 0.7 }}
+                    transition={{ delay: 0.3, duration: 0.7 }}
                 >
                     The Network Behind{" "}
                     <span className="bg-gradient-to-r from-brand-coral via-brand-green to-brand-cyan bg-clip-text text-transparent">
@@ -49,7 +49,7 @@ export default function Hero() {
                     className="mt-6 text-lg text-brand-text-secondary md:text-xl max-w-2xl mx-auto leading-relaxed"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.2, duration: 0.7 }}
+                    transition={{ delay: 0.5, duration: 0.7 }}
                 >
                     We build, launch, and scale culture-driven podcasts and digital media brands.
                 </motion.p>
@@ -59,7 +59,7 @@ export default function Hero() {
                     className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.6, duration: 0.7 }}
+                    transition={{ delay: 0.7, duration: 0.7 }}
                 >
                     <Button variant="primary" href="/shows">
                         Explore Shows
